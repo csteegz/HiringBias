@@ -34,7 +34,7 @@ function SearchJob(Description,Location) {
 
 //Based off this tutorial http://jcla1.com/blog/javascript-mapreduce/
 function buildRow(element,index,context){
-return '<tr class = "clickable-row" data-url="../index.html?id='+element.id+'"><th>'+(index+1)+'</th><td>' + element.title + '</td><td>'+element.company+'</td><td>'+element.location+'</td></tr>';
+return '<tr class = "clickable-row" data-url="posting.html?id='+element.id+'"><th>'+(index+1)+'</th><td>' + element.title + '</td><td>'+element.company+'</td><td>'+element.location+'</td></tr>';
 }
 
 //http://stackoverflow.com/questions/17147821/how-to-make-a-whole-row-in-a-table-clickable-as-a-link
