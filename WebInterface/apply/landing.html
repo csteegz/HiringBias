@@ -5,9 +5,54 @@
     <title>Apply for a Job</title>
     <link rel = "stylesheet" href="../css/bootstrap.css">
     <link rel = "stylesheet" href="../css/bootstrap-theme.css">
-    <script href="../js/bootstrap.js" type="application/javascript"></script>
+    <link rel = "stylesheet" href="../js/jquery-ui.css">
+    <link href="../css/bootstrap-tag-cloud.css" rel="stylesheet">
+    <script src="../js/jquery-1.12.3.js"></script>
+    <script src="../js/bootstrap.js" type="application/javascript"></script>
+    <script src="../js/jquery-ui.js"></script>
+    <script src="../js/search.js"></script>
+    <link rel="icon" type="image/jpg"
+          href="../images/favicon.jpg" />
+    <script>
+        $(function() {
+            var availableTags = [
+                "ActionScript",
+                "AppleScript",
+                "Asp",
+                "BASIC",
+                "C",
+                "C++",
+                "Clojure",
+                "COBOL",
+                "ColdFusion",
+                "Erlang",
+                "Fortran",
+                "Groovy",
+                "Haskell",
+                "Java",
+                "JavaScript",
+                "Lisp",
+                "Perl",
+                "PHP",
+                "Python",
+                "Ruby",
+                "Scala",
+                "Scheme"
+            ];
+            $( "#search" ).autocomplete({
+                source: availableTags
+            });
+            $("#form").submit(function(ev){
+                event.preventDefault();
+                console.log(ev);
+                SearchJob($("#search").val(),$("#where").val());
+            })
+        });
+    </script>
 </head>
+
 <body>
+<div class = wrapper>
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -31,9 +76,92 @@
     </div><!-- /.container-fluid -->
 </nav>
 
-<p>
-Apply for a Job Here!!!
-</p>
+<div class = "container" id="main">
+<div class = "row">
+<div class="col-md-4 col-md-offset-4">
+    <h1 class="text-center">
+        Find a Job
+    </h1>
+</div>
+</div>
+    <div class = "row">
+    <form class="form-inline col-md-offset-4" id="form">
+        <div class="form-group">
+            <label for="search">Find</label>
+            <input type="text" class="form-control" id="search" placeholder="Job Details">
+        </div>
 
+        <div class="form-group">
+            <label for="Where">In:</label>
+            <input type="text" class="form-control" id="where" placeholder="Location">
+        </div>
+        <button class="btn btn-default" id="submit" type="submit">Search</button>
+    </form>
+    </div>
+    <div class = "container" id="results" style="margin-top: 30px;">
+    </div>
+</div>
+<div class="push"></div>
+</div>
+<footer class="footer bg-info">
+    <div class="container text-muted text-center">
+        <ul class="list-inline text-muted">
+            <li><a href="https://github.com/csteegz/HiringBias">GitHub</a></li>
+            <li><a href="http://cmsc434-s16.wikispaces.com/TA05+Interactive+Prototype+v1">Asignment Link</a></li>
+            <li><a href="../about/">About</a></li>
+        </ul>
+        <p>
+            TA-05 By Colin Versteeg, Sam Price, Jesse Averbukh and TJ Pickeral
+        </p>
+    </div>
+</footer>
+<div class="modal fade" id="applyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Apply for <div id="title"></div></h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label for="resSelect" class="col-sm-2 control-label">Resume</label>
+                        <div class="col-sm-5">
+                            <select class="form-control" id="resSelect">
+                            <option> Resume 1
+                            </option>
+                                <option>
+                                    Resume 2
+                                </option>
+                                <option>
+                                    Resume 3
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="CLSelect" class="col-sm-2 control-label">Cover Letter</label>
+                        <div class="col-sm-5">
+                            <select class="form-control" id="CLSelect">
+                                <option> Letter 1
+                                </option>
+                                <option>
+                                    Letter 2
+                                </option>
+                                <option>
+                                    Letter 3
+                                </option>
+                            </select>                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <a href="submit.html" class="btn btn-primary">Apply!</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script language="JavaScript" src="../js/bootstrap-tag-cloud.js"></script>
 </body>
 </html>
