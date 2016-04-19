@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.samprice.applytojob.MainActivity">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:rowCount="30"
+        android:columnCount="1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="All Positions"
+            android:id="@+id/button4"
+            android:onClick="onClickAllResultsT"
+            android:layout_column="0"
+            android:layout_row="0" />
+
+        <TextView
+            android:layout_width="236dp"
+            android:layout_height="42dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Job Position:"
+            android:id="@+id/textView23"
+            android:layout_column="0"
+            android:layout_row="3" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/textTags"
+            android:id="@+id/textView24"
+            android:layout_column="0"
+            android:layout_row="5" />
+
+        <TextView
+            android:layout_width="209dp"
+            android:layout_height="71dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Job Description:"
+            android:id="@+id/textView25"
+            android:layout_column="0"
+            android:layout_row="7" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Description"
+            android:id="@+id/textView26"
+            android:layout_column="0"
+            android:layout_row="15" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Location:"
+            android:id="@+id/textView27"
+            android:layout_column="0"
+            android:layout_row="21" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Unites States"
+            android:id="@+id/textView28"
+            android:layout_column="0"
+            android:layout_row="22" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Salary:"
+            android:id="@+id/textView29"
+            android:layout_column="0"
+            android:layout_row="23" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="$60,000"
+            android:id="@+id/textView30"
+            android:layout_column="0"
+            android:layout_row="24" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Apply"
+            android:id="@+id/button11"
+            android:onClick="onClickResume"
+            android:layout_row="29"
+            android:layout_column="0" />
+
+    </GridLayout>
+
+</RelativeLayout>
