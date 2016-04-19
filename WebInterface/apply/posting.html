@@ -13,7 +13,22 @@
     <link rel="icon" type="image/jpg"
           href="../images/favicon.jpg" />
     <script>
-        $();
+        var getUrlParameter = function getUrlParameter(sParam) {
+            var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+                    sURLVariables = sPageURL.split('&'),
+                    sParameterName,
+                    i;
+
+            for (i = 0; i < sURLVariables.length; i++) {
+                sParameterName = sURLVariables[i].split('=');
+
+                if (sParameterName[0] === sParam) {
+                    return sParameterName[1] === undefined ? true : sParameterName[1];
+                }
+            }
+        };
+        var id = getUrlParameter('id');
+        singleJob(id);
     </script>
 </head>
 
@@ -42,41 +57,7 @@
         </div><!-- /.container-fluid -->
     </nav>
     <div class = "container">
-        <div class="page-header">
-            <h1> <div id ="title">Title</div><small><div id="location">Location</div></small></h1>
-        </div>
-        <div class = "col-md-8">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h3 class="panel-title">Description</h3>
-            </div>
-            <div class="panel-body" id="Description">
-                Basic panel example
-            </div>
-        </div>
-        </div>
-        <div class = "pull-right col-md-3">
-            <div class="thumbnail">
-                <img src="http://github-jobs.s3.amazonaws.com/bc320e36-00d5-11e6-8cd6-7444aca4cad8.jpg" alt="Company Logo">
-                <div class="caption">
-                    <h3 id="company_name">Company Name</h3>
-                    <p id="company_description"></p>
-                    <p><a href="#" class="btn btn-primary" role="button">Apply Now!</a></p>
-                </div>
-            </div>
-        </div>
-        <div class = "col-md-8">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Tags</h3>
-                </div>
-                <div class="panel-body" id="Tags">
-                    Basic panel example
-                </div>
-                </div>
-            </div>
-    </div>
-    <div class="push"></div>
+
 </div>
 <footer class="footer bg-info">
     <div class="container text-muted text-center">
