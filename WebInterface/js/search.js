@@ -69,9 +69,9 @@ function doSingleJob(arr,index) {
         <div class="thumbnail">\
         <img src=' +data.company_logo + ' alt="Company Logo" id="company_logo">\
         <div class="caption">\
-        <h3 id="company_name"> <a href='+data.company_url+'>'+data.company+'</h3>\
+        <h3 id="company_name"> <a href='+data.company_url+'>'+data.company+'</a></h3>\
     <p id="company_description"></p>\
-        <p><a href="#" class="btn btn-primary" role="button">Apply Now!</a></p>\
+        <p><button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#applyModal">Apply Now!</button></p>\
     </div>\
     </div>\
     </div>\
@@ -89,4 +89,5 @@ function doSingleJob(arr,index) {
     <div class="push"></div>';
 
     $('#main').html(horrificHack);
+    $('#title').html(data.title);
 }
