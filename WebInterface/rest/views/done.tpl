@@ -2,17 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Apply for a Job</title>
-    <link rel = "stylesheet" href="../css/bootstrap.css">
-    <link rel = "stylesheet" href="../css/bootstrap-theme.css">
-    <link rel = "stylesheet" href="../js/jquery-ui.css">
+    <title>Addded {{name}}</title>
+    <link rel = "stylesheet" href="../../css/bootstrap.css">
+    <link rel = "stylesheet" href="../../css/bootstrap-theme.css">
+    <link rel = "stylesheet" href="../../js/jquery-ui.css">
     <link href="../css/bootstrap-tag-cloud.css" rel="stylesheet">
-    <script src="../js/jquery-1.12.3.js"></script>
-    <script src="../js/bootstrap.js" type="application/javascript"></script>
-    <script src="../js/jquery-ui.js"></script>
-    <script src="../js/search.js"></script>
+    <script src="../../js/jquery-1.12.3.js"></script>
+    <script src="../../js/bootstrap.js" type="application/javascript"></script>
+    <script src="../../js/jquery-ui.js"></script>
+    <script src="../../js/search.js"></script>
     <link rel="icon" type="image/jpg"
-          href="../images/favicon.jpg" />
+          href="../../images/favicon.jpg" />
     <script>
         $(function() {
             var availableTags = [
@@ -69,38 +69,16 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="../apply/landing.html">Apply for a Job</a></li>
+                <li><a href="../apply/landing.html">Apply for a Job</a></li>
                 <li><a href="../post/landing.html">Post a Job</a></li>
-                <li><a href="../resume/landing.html">Add a Resume</a></li>
+                <li  class="active"><a href="../resume/landing.html">Add a Resume</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
 
 <div class = "container" id="main">
-<div class = "row">
-<div class="col-md-4 col-md-offset-4">
-    <h1 class="text-center">
-        Find a Job
-    </h1>
-</div>
-</div>
-    <div class = "row">
-    <form class="form-inline col-md-offset-4" id="form">
-        <div class="form-group">
-            <label for="search">Find</label>
-            <input type="text" class="form-control" id="search" placeholder="Job Details">
-        </div>
-
-        <div class="form-group">
-            <label for="Where">In:</label>
-            <input type="text" class="form-control" id="where" placeholder="Location">
-        </div>
-        <button class="btn btn-default" id="submit" type="submit">Search</button>
-    </form>
-    </div>
-    <div class = "container" id="results" style="margin-top: 30px;">
-    </div>
+Created resume {{name}}.
 </div>
 <div class="push"></div>
 </div>
